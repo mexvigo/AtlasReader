@@ -31,6 +31,29 @@
             </div>
         </section>
 
+        <!-- Data Load Section (shown when API fetch fails due to CORS) -->
+        <section class="card" id="paste-section" style="display:none;">
+            <div class="card-header">
+                <h2>Load Mission Data</h2>
+            </div>
+            <div class="card-body">
+                <p class="help-text" style="margin-bottom:0.75rem;">
+                    The Atlas API cannot be called directly from this page due to browser security restrictions (CORS).
+                    To load data, open the link below in a new tab, copy all the JSON content, and paste it here.
+                </p>
+                <p style="margin-bottom:0.75rem;">
+                    <a href="https://mai-atlas.microsoft.com/api/missions" target="_blank" rel="noopener noreferrer">&#128279; Open Atlas Missions API</a>
+                    &nbsp;&mdash;&nbsp; Copy all content from that page (Ctrl+A, Ctrl+C)
+                </p>
+                <textarea id="paste-area" rows="8" placeholder="Paste the JSON data from the Atlas API here..."></textarea>
+                <div style="margin-top:0.75rem;">
+                    <button class="btn btn-primary" id="load-data-btn">
+                        <span class="btn-icon">&#128229;</span> Load Data
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Status Section -->
         <section class="card" id="status-section" style="display:none;">
             <div class="card-body">
